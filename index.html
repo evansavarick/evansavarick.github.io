@@ -4,13 +4,16 @@
     <meta charset="utf-8">
     <title>Evan Savarick</title>
     <meta name="keywords" content="Evan Savarick, Vanderbuilt, UCF, Valedictorian, Financial Advisor, Morgan Stanley, private wealth, high net worth, Savarick Group">
-    <style type="text/css">
-      wrap { position:fixed; left:0; width:100%; top:0; height:100%; }
-      iframe { display: block; width:100%; height:100%; }
-    </style>
+    <script type="text/javascript">
+      function iframeLoaded() {
+        var iFrameID = document.getElementById('idIframe');
+        if(iFrameID) {
+          iFrameID.height = "";
+          iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
+        }
+      }
+    </script>
   </head>
-  <div id="wrap">
-    <iframe sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
-      src="http://about.me/evansavarick" frameborder=0 id="iframe"> </iframe>
-  </div>
+  <iframe sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+    src="http://about.me/evansavarick" frameborder=0 id="idIframe" onload="iframeLoaded() "> </iframe>
 </html>
